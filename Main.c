@@ -1,14 +1,23 @@
-#include "uart.h"
+#include "led.h"
 
+Led_Type led1;
+Led_Type led2;
 
-int main(){
-  
-	USART2_Init();
+int main(void){
+
+  USART2_Init();
+	Led_ctor(&led1,RED,OFF);
+	Led_ctor(&led2,BLUE,ON);
 	
-	//test_setup();
-	printf("Hello there from main function");
+//	Led_getState(&led1);
+//	Led_getState(&led2);
+//	
+//	Led_setState(&led1,ON);
+//	
+	
+	
+	
 	while(1){
 	
 	}
-
 }
